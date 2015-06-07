@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+                android:background="@drawable/bg_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".."
+        android:id="@+id/tv_temperature"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textSize="140sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_degreeSymbol"
+        android:layout_alignTop="@+id/tv_temperature"
+        android:layout_toRightOf="@+id/tv_temperature"
+        android:layout_toEndOf="@+id/tv_temperature"
+        android:src="@drawable/degree"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:id="@+id/tv_currentTime"
+        android:textColor="#99ffffff"
+        android:layout_above="@+id/tv_temperature"
+        android:layout_alignRight="@+id/iv_degreeSymbol"
+        android:layout_alignEnd="@+id/iv_degreeSymbol"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieving city.."
+        android:id="@+id/tv_location"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_icon"
+        android:src="@drawable/rain"
+        android:layout_alignBottom="@+id/tv_location"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_temperature"
+        android:layout_alignRight="@+id/iv_degreeSymbol"
+        android:layout_alignEnd="@+id/iv_degreeSymbol"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:gravity="end"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:id="@+id/tv_humidPercent"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:id="@+id/tv_humidity"
+                android:textColor="#ffffffff"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:id="@+id/tv_precipPercent"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chance of Precipitation"
+                android:id="@+id/tv_precipitation"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffffff"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieving conditions..."
+        android:id="@+id/tv_weatherDescription"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_refreshButton"
+        android:src="@drawable/refresh"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/iv_refreshButton"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/tv_weatherDescription"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOURLY"
+            android:id="@+id/hourly_button"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:textColor="#ffffff"
+            android:layout_marginRight="2dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WEEKLY"
+            android:id="@+id/weekly_button"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="2dp"/>
+    </LinearLayout>
+</RelativeLayout>

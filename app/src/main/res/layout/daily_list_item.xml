@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="34dp"
+                android:paddingRight="32dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+    tools:background="#ffaa00">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circle_iv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/bg_temperature"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon_iv"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/circle_iv"
+        android:layout_toEndOf="@+id/circle_iv"
+        android:src="@drawable/clear_night"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayname_label"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/icon_iv"
+        android:layout_toEndOf="@+id/icon_iv"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:textColor="#ffffff"
+        tools:text="Wednesday"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperature_label"
+        android:layout_alignBottom="@+id/circle_iv"
+        android:layout_alignTop="@+id/circle_iv"
+        android:layout_alignRight="@+id/circle_iv"
+        android:layout_alignLeft="@+id/circle_iv"
+        android:gravity="center"
+        tools:text="100"
+        android:layout_marginTop="12dp"/>
+
+</RelativeLayout>
